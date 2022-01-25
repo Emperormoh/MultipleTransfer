@@ -1,0 +1,57 @@
+﻿<resources>
+   <string name="action_settings">Settings</string>
+    <string name="app_name">MultipleTransfer</string>
+    <string name="set_goals">Dont just set goals</string>
+    <string name="score_them">Score them</string>
+    <string name="landpg_icon">LandingPageImage</string>
+    <string name="log_in">Log In</string>
+    <string name="get_started">Get Started</string>
+    <string name="get_loan">Get a Loan</string>
+    <string name="quick_links">Quick Links</string>
+    <string name="get_wallet">Get a Wallet</string>
+
+
+    <string name="email_Address">Email Address</string>
+    <string name="welcom_back">Welcome Back!</string>
+    <string name="_password">Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="new_to_wema">- You are new to WEMA and ALAT.</string>
+    <string name="new_to_alat">- You are new to ALAT and have a WEMA account.</string>
+    <string name="have_wema_mobile">- You are new to ALAT and have WEMA mobile.</string>
+    
+    <string name="unable_to">Unable to log in? Kindly Sign Up if:</string>
+    <string name="alat_logo">Alat Logo</string>
+    <string name="hide_logo">Hide Logo</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_payment">Payment</string>
+    <string name="title_loans">Loans</string>
+    <string name="title_cards">Cards</string>
+    <string name="title_goals">Goals</string>
+
+    <string-array name="Banks">
+        <item>"Choose Bank"</item>
+        <item>"ALATbyWEMA"</item>
+        <item>"Wema Bank"</item>
+        <item>"Access Bank"</item>
+        <item>"Fidelity Bank"</item>
+        <item> "First Bank"</item>
+        <item>"FCMB"</item>
+        <item>"GTB"</item>
+        <item>"Union Bank"</item>
+        <item>"UBA"</item>
+        <item>"Zenith Bank"</item>
+        <item>"Citibank"</item>
+        <item>"Ecobank"</item>
+        <item>"KeyStone Bank"</item>
+        <item>"Stanbic IBTC"</item>
+        <item>"Sterling Bank"</item>
+        <item>"Globus Bank"</item>
+        <item>"Providus Bank"</item>
+        <item>"Kuda"</item>
+        <item>"VFD Bank"</item>
+
+    </string-array>
+    
+    
+</resources>

@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/dismissAddBenKeyPad"
+	android:padding="15dp">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/backTodash"
+			android:layout_width="40dp"
+			android:layout_height="30dp"
+			android:layout_marginTop="7dp"
+			android:background="@drawable/backbtn"/>
+
+		<!--<TextView
+			android:id="@+id/group_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Group"
+			android:textSize="15dp"
+			android:layout_marginLeft="130dp"
+			android:textAlignment="center"
+			android:textColor="@android:color/black"/>-->
+
+		<Button
+			android:id="@+id/add_beneficiary"
+			android:layout_width="20dp"
+			android:layout_height="20dp"
+			android:layout_marginTop="7dp"
+			android:layout_marginLeft="290dp"
+			android:background="@drawable/add_ben"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginTop="10dp">
+
+		<TextView
+			android:id="@+id/count_ben"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Beneficiaries:"
+			android:textSize="10dp"
+			android:layout_marginLeft="3dp"
+			android:textAlignment="textStart"
+			android:textColor="@android:color/black"/>
+
+		<TextView
+			android:id="@+id/total_amount"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="NGN 0.00"
+			android:textSize="10dp"
+			android:textAlignment="textEnd"
+			android:layout_marginRight="3dp"
+			android:textColor="@android:color/black"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="2dp"
+		android:orientation="horizontal"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:background="#830053">
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_weight="1"
+		android:id="@+id/linearLayout_noBenAdded"
+		android:layout_gravity="center_vertical"
+		android:gravity="center_vertical"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<TextView
+			android:text="No Beneficiary Added"
+			android:layout_width="match_parent"
+			android:textColor="@android:color/black"
+			android:gravity="center_horizontal"
+			android:layout_height="wrap_content"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		>
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/mRecycler"
+			android:visibility="gone"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+
+	<Button
+		android:id="@+id/btn_totransfer"
+		android:text="Transfer"
+		android:gravity="center"
+		android:layout_width="300dp"
+		android:layout_height="30dp"
+		android:layout_gravity="center"
+		android:background="#830053"
+		android:textColor="@android:color/white"/>
+
+	</LinearLayout>
+
+</LinearLayout>

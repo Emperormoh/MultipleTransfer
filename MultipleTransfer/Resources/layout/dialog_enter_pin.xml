@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="30dp">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Enter Pin"
+			android:textSize="20dp"
+			android:textAlignment="textStart"
+			android:layout_marginRight="15dp"
+			android:textColor="#830053"/>
+
+		<ImageView
+			android:id="@+id/cancel_pin"
+			android:src="@drawable/cancel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="160dp"
+			android:layout_marginTop="6dp"
+			android:contentDescription="@string/get_loan"/>
+
+	</LinearLayout>
+
+	
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/edt_pin"
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:layout_marginTop="10dp"
+		android:password="true"
+		android:background="@drawable/custom_edttxt_bg"
+		android:shadowColor="#ff000000"
+		android:paddingLeft="15dp"/>
+	<Button
+		android:id="@+id/btn_Okay"
+		android:layout_marginTop="10dp"
+		android:layout_width="150dp"
+		android:layout_height="35dp"
+		android:text="Okay"
+		android:layout_gravity="center"
+		android:textAllCaps="false"
+		android:background="#830053"
+		android:textColor="@android:color/white"
+		/>
+
+
+
+
+</LinearLayout>

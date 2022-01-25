@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/addDialogView"
+	android:padding="30dp">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Add recipient"
+			android:textSize="20dp"
+			android:textStyle="bold"
+			android:textAlignment="textStart"
+			android:layout_marginRight="15dp"
+			android:textColor="#830053"/>
+
+		<ImageView
+			android:id="@+id/cancel"
+			android:src="@drawable/cancel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="130dp"
+			android:layout_marginTop="6dp"
+			android:contentDescription="@string/get_loan"/>
+
+	</LinearLayout>
+
+	<!--<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Choose Bank:"
+		android:layout_marginTop="15dp"
+		android:textColor="@android:color/black"/>-->
+
+	<!--<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/recycler_choose_bank"
+		android:layout_width="match_parent"
+		android:layout_height="100dp"
+		android:orientation="horizontal"
+		app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+		app:stackFromEnd="true"
+		android:layout_marginTop="10dp"
+		app:reverseLayout="true"
+		android:paddingLeft="15dp"/>-->
+
+	<Spinner
+		android:id="@+id/spinner_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		/>
+
+
+	<!--<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Bank Name:"
+		android:layout_marginTop="15dp"
+		android:textColor="@android:color/black"/>
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/edt_bank_name"
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/custom_edttxt_bg"
+		android:shadowColor="#ff000000"
+		android:paddingLeft="15dp"/>-->
+
+	<!--<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Account Name:"
+		android:layout_marginTop="15dp"
+		android:textColor="@android:color/black"/>
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/edt_account_name"
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/custom_edttxt_bg"
+		android:shadowColor="#ff000000"
+		android:paddingLeft="15dp"/>-->
+
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Account Number:"
+		android:layout_marginTop="15dp"
+		android:textColor="@android:color/black"/>
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/edt_account_number"
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/custom_edttxt_bg"
+		android:shadowColor="#ff000000"
+		android:paddingLeft="15dp"/>
+
+	<!--<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Account Name:"
+		android:layout_marginTop="15dp"
+		android:textColor="@android:color/black"/>
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/edt_account_name"
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:layout_marginTop="10dp"
+		android:enabled="false"
+		android:background="@drawable/custom_edttxt_bg"
+		android:shadowColor="#ff000000"
+		android:paddingLeft="15dp"/>-->
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Amount:"
+		android:layout_marginTop="15dp"
+		android:textColor="@android:color/black"/>
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/edt_amount"
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/custom_edttxt_bg"
+		android:shadowColor="#ff000000"
+		android:paddingLeft="15dp"/>
+
+	<Button
+		android:id="@+id/summit_add"
+		android:layout_marginTop="15dp"
+		android:layout_width="150dp"
+		android:layout_height="35dp"
+		android:text="Add"
+		android:textAllCaps="false"
+		android:layout_gravity="center"
+		android:background="#830053"
+		android:textColor="@android:color/white"
+		/>
+
+</LinearLayout>

@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<FrameLayout
+		android:id="@+id/content_frame"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<com.google.android.material.bottomnavigation.BottomNavigationView
+			android:layout_width="match_parent"
+			app:menu="@menu/buttom_nav"
+			android:layout_gravity="bottom"
+			android:id="@+id/bottom_navigation"
+			android:layout_height="wrap_content"
+			app:labelVisibilityMode="labeled"
+			android:background="#F5F0F0"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:padding="15dp">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<ImageView
+					android:src="@drawable/usser"
+					android:layout_width="35dp"
+					android:layout_height="32dp"
+					android:layout_marginLeft="10dp"
+					android:contentDescription="@string/get_loan"/>
+
+
+				<TextView
+					android:id="@+id/user_name"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Hi, Moh!"
+					android:textSize="20dp"
+					android:layout_marginLeft="10dp"
+					android:textColor="#830053"/>
+
+				<ImageView
+					android:src="@drawable/newbell"
+					android:layout_width="match_parent"
+					android:layout_height="30dp"
+					android:layout_marginLeft="205dp"
+					android:layout_marginTop="5dp"
+					android:contentDescription="@string/get_loan"/>
+
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Account(s)"
+				android:textSize="15dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginTop="15dp"
+				android:textColor="#830053"/>
+
+			<LinearLayout
+				android:id="@+id/cardView1"
+				android:layout_width="match_parent"
+				android:layout_height="200dp"
+				android:orientation="vertical"
+				android:background="@drawable/dash_bg">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:layout_marginTop="5dp">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Balance"
+						android:textSize="14dp"
+						android:layout_marginTop="8dp"
+						android:layout_marginLeft="20dp"
+						android:textColor="@android:color/white"/>
+
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="Status"
+						android:textSize="14dp"
+						android:layout_marginTop="8dp"
+						android:textAlignment="textEnd"
+						android:layout_marginRight="20dp"
+						android:textColor="@android:color/white"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:layout_marginTop="3dp">
+
+					<TextView
+						android:id="@+id/acct_balance"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="xxxxxxxxxxxx"
+						android:textSize="14dp"
+						android:textStyle="bold"
+						android:layout_marginLeft="20dp"
+						android:textColor="@android:color/white"/>
+
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="Active"
+						android:textSize="14dp"
+						android:textAlignment="textEnd"
+						android:layout_marginRight="20dp"
+						android:textColor="@android:color/white"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:layout_marginTop="3dp">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Account Number"
+						android:textSize="13dp"
+						android:layout_marginLeft="20dp"
+						android:textAlignment="textStart"
+						android:layout_marginTop="25dp"
+						android:textColor="@android:color/white"/>
+
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="Fixed"
+						android:textSize="13dp"
+						android:textAlignment="textEnd"
+						android:layout_marginRight="25dp"
+						android:layout_marginTop="25dp"
+						android:textColor="@android:color/white"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:layout_marginTop="3dp">
+
+					<TextView
+						android:id="@+id/dash_acct_number"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="xxxxxxxxxx"
+						android:textSize="14dp"
+						android:layout_marginLeft="20dp"
+						android:textAlignment="textStart"
+						android:layout_marginTop="10dp"
+						android:textColor="@android:color/white"/>
+
+					<TextView
+						android:id="@+id/txt_acct_type"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="Tier 3 Savings Account"
+						android:textSize="14dp"
+						android:textAlignment="textEnd"
+						android:layout_marginRight="25dp"
+						android:layout_marginTop="10dp"
+						android:textColor="@android:color/white"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:layout_marginTop="3dp">
+
+					<Button
+						android:id="@+id/fund_account"
+						android:text="Fund Account"
+						android:textAllCaps="false"
+						android:layout_width="wrap_content"
+						android:layout_height="25dp"
+						android:layout_marginLeft="18dp"
+						android:layout_marginTop="10dp"
+						android:background="#830053"
+						android:textSize="10dp"
+						android:textColor="@android:color/white"
+						android:layout_marginBottom="0.0dp" />
+
+					<Button
+						android:id="@+id/transaction_history"
+						android:text="Transaction History"
+						android:textAllCaps="false"
+						android:layout_width="120dp"
+						android:layout_height="25dp"
+						android:layout_marginLeft="120dp"
+						android:layout_marginTop="10dp"
+						android:background="#830053"
+						android:textSize="10dp"
+						android:textColor="@android:color/white"/>
+
+				</LinearLayout>
+
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginTop="10dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="My Favorite"
+					android:textSize="14dp"
+					android:layout_marginLeft="15dp"
+					android:textAlignment="textStart"
+					android:textColor="#830053"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Edit Favorite"
+					android:textSize="14dp"
+					android:textAlignment="textEnd"
+					android:layout_marginRight="15dp"
+					android:textColor="#830053"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="70dp"
+				android:orientation="horizontal"
+				android:layout_marginTop="30dp">
+
+				<ImageView
+					android:id="@+id/getLoan"
+					android:src="@drawable/create_account"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:contentDescription="@string/get_loan" />
+
+				<ImageView
+					android:id="@+id/multi_transfer"
+					android:src="@drawable/save_beneficiary"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:contentDescription="@string/quick_links" />
+
+				<ImageView
+					android:id="@+id/save_beneficiary"
+					android:src="@drawable/group_transfer"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:contentDescription="@string/get_wallet" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="40dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Create"
+					android:textSize="12dp"
+					android:layout_weight="1"
+					android:layout_marginLeft="10dp"
+					android:textColor="@android:color/black"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Multiple"
+					android:textSize="12dp"
+					android:layout_weight="1"
+					android:layout_marginLeft="45dp"
+					android:textColor="@android:color/black"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Save"
+					android:textSize="12dp"
+					android:layout_marginLeft="45dp"
+					android:layout_weight="1"
+					android:textColor="@android:color/black"/>
+
+
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginLeft="35dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Account"
+					android:textSize="12dp"
+					android:layout_weight="1"
+					android:layout_marginLeft="10dp"
+					android:textColor="@android:color/black"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Transfer"
+					android:textSize="12dp"
+					android:layout_weight="1"
+					android:layout_marginLeft="10dp"
+					android:textAlignment="center"
+					android:textColor="@android:color/black"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Beneficiary"
+					android:textSize="12dp"
+					android:layout_weight="1"
+					android:textAlignment="textEnd"
+					android:layout_marginRight="34dp"
+					android:textColor="@android:color/black"/>
+
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="40dp"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Lifestyle"
+					android:textSize="14dp"
+					android:layout_marginLeft="15dp"
+					android:textAlignment="textStart"
+					android:textColor="#830053"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Deals and Discount"
+					android:textSize="14dp"
+					android:textAlignment="textEnd"
+					android:layout_marginRight="15dp"
+					android:textColor="#830053"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="150dp"
+				android:layout_marginTop="5dp"
+				android:orientation="horizontal">
+
+				<ImageView
+					android:src="@drawable/lifestyle"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:contentDescription="@string/get_loan"/>
+
+				<ImageView
+					android:src="@drawable/deals_n_discount"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:layout_marginLeft="10dp"
+					android:contentDescription="@string/get_loan"
+					android:id="@+id/imageView2" />
+
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</FrameLayout>
+
+</LinearLayout>
+

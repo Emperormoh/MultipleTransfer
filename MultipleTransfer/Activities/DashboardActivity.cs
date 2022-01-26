@@ -43,14 +43,22 @@ namespace MultipleTransfer
             txtAcctBalance = FindViewById<TextView>(Resource.Id.acct_balance);
             txtUsername = FindViewById<TextView>(Resource.Id.user_name);
 
+            Button historia = FindViewById<Button>(Resource.Id.transaction_history);
+            historia.Click += historia_Click;
+
 
             dashWise();
 
             
-            MemoryManager.Instance(this).clearPreference();
+            //MemoryManager.Instance(this).clearPreference();
 
         }
 
+        private void historia_Click(object sender, EventArgs e)
+        {
+            Intent toHistory = new Intent(this, typeof(TransactionHistoryActivity));
+            this.StartActivity(toHistory);
+        }
 
         private void Save_Click(object sender, EventArgs e)
         {
@@ -64,20 +72,23 @@ namespace MultipleTransfer
 
         public void dashWise()
         {
-            var mData = Intent.GetStringExtra("LoginResponseModelK");
-            if (!string.IsNullOrEmpty(mData))
+            //var mData = Intent.GetStringExtra("LoginResponseModelK");
+            //if (!string.IsNullOrEmpty(mData))
+            //{
+        
+                loginResponse = MemoryManager.Instance(this).getLoginUser("LoginResponseModelK");
+             if (loginResponse != null)
             {
-                MemoryManager.Instance(this).getLoginUser("LoginResponseModelK");
-
-                loginResponse = JsonConvert.DeserializeObject<LoginResponseModel>(mData);
+                //loginResponse = JsonConvert.DeserializeObject<LoginResponseModel>(mData);
                 txtNumber.Text = loginResponse.accountNumber;
                 txtAcctType.Text = loginResponse.accountType;
                 txtUsername.Text = "Hi " + loginResponse.firstName + "!";
                 decimal ab = loginResponse.accountBalance;
                 txtAcctBalance.Text = ab.ToString();
-
-
             }
+               
+
+           // }
 
         }
     }

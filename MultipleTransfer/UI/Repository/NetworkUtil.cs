@@ -146,6 +146,35 @@ namespace MultipleTransfer.UI.Repository
         }
 
 
+
+        internal static async Task<string> GetAsycDataTrans(string actionName, string mrawData)
+        {
+            string mresult = "";
+            try
+            {
+                using (var mclient = new HttpClient() { BaseAddress = new Uri(baseUrlGet), })
+                {
+                    mclient.Timeout = TimeSpan.FromMinutes(1);
+                    var response = await mclient.GetAsync($"{actionName}/{mrawData}").ConfigureAwait(false);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var result = await response.Content.ReadAsStringAsync();
+                        return result;
+                    }
+                    else
+                    {
+                        return response.ReasonPhrase;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+                mresult = "";
+            }
+            return mresult;
+        }
+
         //public static HttpClientHandler GetInsecureHandler()
         //{
         //    HttpClientHandler handler = new HttpClientHandler();

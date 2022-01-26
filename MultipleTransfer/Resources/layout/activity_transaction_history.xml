@@ -22,14 +22,14 @@
 			android:layout_marginTop="10dp"
 			android:textAlignment="center"
 			android:gravity="center_vertical"
-			android:layout_marginLeft="140dp"/>
+			android:layout_marginLeft="120dp"/>
 
 		<ImageView
 			android:id="@+id/img_toDash"
 			android:layout_width="46.8dp"
 			android:layout_height="34.8dp"
 			android:src="@drawable/homify"
-			android:layout_marginLeft="110dp"/>
+			android:layout_marginLeft="105dp"/>
 
 	</LinearLayout>
 

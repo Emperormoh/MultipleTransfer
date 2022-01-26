@@ -7616,91 +7616,88 @@ namespace MultipleTransfer
 			public const int txt_summary_recipients = 2131296778;
 			
 			// aapt resource value: 0x7F09020B
-			public const int txt_trans_acctNum = 2131296779;
+			public const int txt_trans_amount = 2131296779;
 			
 			// aapt resource value: 0x7F09020C
-			public const int txt_trans_amount = 2131296780;
+			public const int txt_trans_recipients = 2131296780;
 			
 			// aapt resource value: 0x7F09020D
-			public const int txt_trans_date = 2131296781;
+			public const int txt_trans_senderAcct = 2131296781;
 			
 			// aapt resource value: 0x7F09020E
-			public const int txt_trans_id = 2131296782;
+			public const int txt_trans_tag = 2131296782;
 			
 			// aapt resource value: 0x7F09020F
-			public const int txt_trans_senderAcct = 2131296783;
+			public const int txt_trans_type = 2131296783;
 			
 			// aapt resource value: 0x7F090210
-			public const int txt_trans_type = 2131296784;
+			public const int @unchecked = 2131296784;
 			
 			// aapt resource value: 0x7F090211
-			public const int @unchecked = 2131296785;
+			public const int uniform = 2131296785;
 			
 			// aapt resource value: 0x7F090212
-			public const int uniform = 2131296786;
+			public const int unlabeled = 2131296786;
 			
 			// aapt resource value: 0x7F090213
-			public const int unlabeled = 2131296787;
+			public const int up = 2131296787;
 			
 			// aapt resource value: 0x7F090214
-			public const int up = 2131296788;
+			public const int useLogo = 2131296788;
 			
 			// aapt resource value: 0x7F090215
-			public const int useLogo = 2131296789;
+			public const int user_name = 2131296789;
 			
 			// aapt resource value: 0x7F090216
-			public const int user_name = 2131296790;
+			public const int vertical_only = 2131296790;
 			
 			// aapt resource value: 0x7F090217
-			public const int vertical_only = 2131296791;
+			public const int view_offset_helper = 2131296791;
 			
 			// aapt resource value: 0x7F090218
-			public const int view_offset_helper = 2131296792;
+			public const int view_transition = 2131296792;
 			
 			// aapt resource value: 0x7F090219
-			public const int view_transition = 2131296793;
+			public const int view_tree_lifecycle_owner = 2131296793;
 			
 			// aapt resource value: 0x7F09021A
-			public const int view_tree_lifecycle_owner = 2131296794;
+			public const int view_tree_saved_state_registry_owner = 2131296794;
 			
 			// aapt resource value: 0x7F09021B
-			public const int view_tree_saved_state_registry_owner = 2131296795;
+			public const int view_tree_view_model_store_owner = 2131296795;
 			
 			// aapt resource value: 0x7F09021C
-			public const int view_tree_view_model_store_owner = 2131296796;
+			public const int visible = 2131296796;
 			
 			// aapt resource value: 0x7F09021D
-			public const int visible = 2131296797;
+			public const int visible_removing_fragment_view_tag = 2131296797;
 			
 			// aapt resource value: 0x7F09021E
-			public const int visible_removing_fragment_view_tag = 2131296798;
-			
-			// aapt resource value: 0x7F09021F
-			public const int west = 2131296799;
-			
-			// aapt resource value: 0x7F090221
-			public const int withinBounds = 2131296801;
+			public const int west = 2131296798;
 			
 			// aapt resource value: 0x7F090220
-			public const int withText = 2131296800;
+			public const int withinBounds = 2131296800;
+			
+			// aapt resource value: 0x7F09021F
+			public const int withText = 2131296799;
+			
+			// aapt resource value: 0x7F090221
+			public const int wrap = 2131296801;
 			
 			// aapt resource value: 0x7F090222
-			public const int wrap = 2131296802;
+			public const int wrap_content = 2131296802;
 			
 			// aapt resource value: 0x7F090223
-			public const int wrap_content = 2131296803;
+			public const int wrap_content_constrained = 2131296803;
 			
 			// aapt resource value: 0x7F090224
-			public const int wrap_content_constrained = 2131296804;
+			public const int x_left = 2131296804;
 			
 			// aapt resource value: 0x7F090225
-			public const int x_left = 2131296805;
+			public const int x_right = 2131296805;
 			
 			// aapt resource value: 0x7F090226
-			public const int x_right = 2131296806;
-			
-			// aapt resource value: 0x7F090227
-			public const int zero_corner_chip = 2131296807;
+			public const int zero_corner_chip = 2131296806;
 			
 			// aapt resource value: 0x7F09000E
 			public const int _Home = 2131296270;

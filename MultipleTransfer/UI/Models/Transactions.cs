@@ -6,20 +6,23 @@ namespace MultipleTransfer.UI.Models
 {
     public class Transactions
     {
+        public string transactionGroupName { get; set; }
         public string transactionId { get; set; }
         public string transactionDate { get; set; }
-        public decimal transactionAmount { get; set; }
+        public double totalAmount { get; set; }
         public string transactionType { get; set; }
         public string narration { get; set; }
         public string senderAccount { get; set; }
         public string bank { get; set; }
         public string receiverAccount { get; set; }
+        public int NumberOfRecipients { get; set; }
 
-        public Transactions(string transId, string transDate, decimal transAmount, string transType, string senderAcct, string receiverAcct, string narration, string bank)
+
+        public Transactions(string transId, string transDate, double transAmount, string transType, string senderAcct, string receiverAcct, string narration, string bank)
         {
             this.transactionId = transId;
             this.transactionDate = transDate;
-            this.transactionAmount = transAmount;
+            this.totalAmount = transAmount;
             this.transactionType = transType;
             this.senderAccount = senderAcct;
             this.receiverAccount = receiverAcct;

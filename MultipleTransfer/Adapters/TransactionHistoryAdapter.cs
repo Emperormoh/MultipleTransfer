@@ -28,12 +28,12 @@ namespace MultipleTransfer.Adapters
             Transactions transactions = TransactionHistory[position];
             TransactionViewHolder tvh = holder as TransactionViewHolder;
             if (tvh != null && tvh.TransactionAmountTxt != null)
-            tvh.TransactionAmountTxt.Text = TransactionHistory[position].transactionAmount.ToString();
-            tvh.RecipientAccountTxt.Text = TransactionHistory[position].receiverAccount;
+            tvh.TransactionAmountTxt.Text = TransactionHistory[position].totalAmount.ToString();
+            tvh.RecipientsTxt.Text = TransactionHistory[position].NumberOfRecipients.ToString();
             tvh.SenderAccountTxt.Text = TransactionHistory[position].senderAccount;
             tvh.TransactionTypeTxt.Text = TransactionHistory[position].transactionType;
-            tvh.TransactionDateTxt.Text = TransactionHistory[position].transactionDate;
-            tvh.Ref_IDTxt.Text = TransactionHistory[position].transactionId;
+            tvh.TransactionGroupNameTxt.Text = TransactionHistory[position].transactionGroupName;
+            //tvh.Ref_IDTxt.Text = TransactionHistory[position].transactionId;
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
@@ -51,11 +51,11 @@ namespace MultipleTransfer.Adapters
         {
 
             public TextView TransactionAmountTxt { get; set; }
-            public TextView RecipientAccountTxt { get; set; }
+            public TextView RecipientsTxt { get; set; }
             public TextView SenderAccountTxt { get; set; }
             public TextView TransactionTypeTxt { get; set; }
-            public TextView TransactionDateTxt { get; set; }
-            public TextView Ref_IDTxt { get; set; }
+            public TextView TransactionGroupNameTxt { get; set; }
+            //public TextView Ref_IDTxt { get; set; }
 
             private readonly Action<int> listener;
             private Context context;
@@ -64,11 +64,11 @@ namespace MultipleTransfer.Adapters
             public TransactionViewHolder(View itemView, Action<int>listener) : base(itemView)
             {
                 TransactionAmountTxt = ItemView.FindViewById<TextView>(Resource.Id.txt_trans_amount);
-                RecipientAccountTxt = ItemView.FindViewById<TextView>(Resource.Id.txt_trans_acctNum);
+                RecipientsTxt = ItemView.FindViewById<TextView>(Resource.Id.txt_trans_recipients);
                 SenderAccountTxt = ItemView.FindViewById<TextView>(Resource.Id.txt_trans_senderAcct);
                 TransactionTypeTxt = ItemView.FindViewById<TextView>(Resource.Id.txt_trans_type);
-                TransactionDateTxt = ItemView.FindViewById<TextView>(Resource.Id.txt_trans_date);
-                Ref_IDTxt = ItemView.FindViewById<TextView>(Resource.Id.txt_trans_id);
+                TransactionGroupNameTxt = ItemView.FindViewById<TextView>(Resource.Id.txt_trans_tag);
+                //Ref_IDTxt = ItemView.FindViewById<TextView>(Resource.Id.txt_trans_id);
 
                 this.listener = listener;
                 itemView.Click += ItemView_Click;
@@ -82,10 +82,14 @@ namespace MultipleTransfer.Adapters
            
         }
 
+
+
         internal void swapdata(List<Transactions> mm)
         {
             this.TransactionHistory = mm;
             NotifyDataSetChanged();
         }
+
+
     }
 }

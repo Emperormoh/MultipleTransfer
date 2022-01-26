@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -14,6 +14,7 @@ using AndroidX.RecyclerView.Widget;
 using MultipleTransfer.Adapters;
 using MultipleTransfer.UI.Models;
 using MultipleTransfer.UI.Repository;
+using MultipleTransfer.UI.Utils;
 using Newtonsoft.Json;
 
 namespace MultipleTransfer.Activities
@@ -23,8 +24,9 @@ namespace MultipleTransfer.Activities
     {
         private RecyclerView TransRv;
         private TransactionHistoryAdapter transactionHistoryAdapter;
-        private List<Transactions> transactions;
+        private List<Transactions> transactions = new List<Transactions>();
         private ImageView ToDashwise;
+        private LoginResponseModel loginResponse;
 
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -44,6 +46,8 @@ namespace MultipleTransfer.Activities
             transactions = new List<Transactions>();
             transactionHistoryAdapter = new TransactionHistoryAdapter(transactions);
             TransRv.SetAdapter(transactionHistoryAdapter);
+
+            transactionHistory();
         }
 
         private void ToDashwise_Click(object sender, EventArgs e)
@@ -52,54 +56,34 @@ namespace MultipleTransfer.Activities
             this.StartActivity(gotoDash);
         }
 
-        private async void transactionHistory(string transactionGroupName, string senderAccount, string transactionType,
-            string numberOfRecipients, decimal totalAmount, string transactionId, string transactionDate,
-            decimal transactionAmount, string narration, string receiverAccount)
+        private async void transactionHistory()
         {
-            var mtransactions = new List<Transactions>();
-            var newTransaction = new Transactions()
+            loginResponse = MemoryManager.Instance(this).getLoginUser("LoginResponseModelK");
+            if(loginResponse != null)
             {
-                transactionId = transactionId,
-                transactionDate = transactionDate,
-                transactionAmount = transactionAmount,
-                receiverAccount = receiverAccount,
-                transactionType = transactionType,
-                senderAccount = senderAccount,
-                narration = narration
-            };
+                string receipt = await NetworkUtil.GetAsycDataTrans("Transaction/get-transaction-groups", loginResponse.accountNumber);
 
-            mtransactions.Add(newTransaction);
+                if (!string.IsNullOrEmpty(receipt))
+                {
+                    var mm = JsonConvert.DeserializeObject<List<Transactions>>(receipt);
 
-            TranscationGroup transactionGroup = new TranscationGroup()
-            {
-                transactionGroupName = transactionGroupName,
-                senderAccount = senderAccount,
-                transactionType = transactionType,
-                numberOfRecipients = numberOfRecipients,
-                totalAmount = totalAmount,
-                transfers = mtransactions,
-                transactionDate = transactionDate
-            };
+                    transactionHistoryAdapter.swapdata(mm);
+                    transactionHistoryAdapter.NotifyDataSetChanged();
 
-            string mRawData = JsonConvert.SerializeObject(transactionGroup);
-            string receipt = await NetworkUtil.PostUSSDAsyc("Transaction/transaction_receipts", mRawData);
-
-            if (!string.IsNullOrEmpty(receipt))
-            {
-                var mm = JsonConvert.DeserializeObject<List<Transactions>>(receipt);
-
-                transactionHistoryAdapter.swapdata(mm);
-                transactionHistoryAdapter.NotifyDataSetChanged();
-
+                }
+                else
+                {
+                    Toast.MakeText(this, "Error fetching history", ToastLength.Long).Show();
+                }
             }
             else
             {
                 Toast.MakeText(this, "Error fetching history", ToastLength.Long).Show();
             }
-
+            //string mRawData = JsonConvert.SerializeObject(transactionGroup);
 
         }
 
-
     }
+    
 }

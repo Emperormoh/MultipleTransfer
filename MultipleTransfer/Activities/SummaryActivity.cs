@@ -66,11 +66,11 @@ namespace MultipleTransfer.Activities
             var wData = Intent.GetStringExtra("LoginResponseModelK");
             if (!string.IsNullOrEmpty(mData))
             {
-                //var userDetails = MemoryManager.Instance(this).getLoginUser("LoginResponseModelK");
+                var userDetails = MemoryManager.Instance(this).getLoginUser("LoginResponseModelK");
                 loginResponse = JsonConvert.DeserializeObject<LoginResponseModel>(mData);
-                txtNumber.Text = loginResponse.accountNumber;
-                txtAcctType.Text = loginResponse.accountType;
-                decimal ab = loginResponse.accountBalance;
+                txtNumber.Text = userDetails.accountNumber;
+                txtAcctType.Text = userDetails.accountType;
+                decimal ab = userDetails.accountBalance;
                 txtAcctBalance.Text = ab.ToString();
 
 

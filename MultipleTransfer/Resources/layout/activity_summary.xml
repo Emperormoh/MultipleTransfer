@@ -123,7 +123,7 @@
 			android:textOff="No"
 			android:textOn="yes"
 			android:checked="true"
-			android:text="Save as beneficiary"
+			android:text="Save as group"
 			android:layout_marginLeft="120dp"
 			android:textColor="#830053"/>
 	</LinearLayout>
